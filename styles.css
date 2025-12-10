@@ -1,0 +1,284 @@
+/* --- 1. Estilos Globales y Tipografía --- */
+
+/* Importar una fuente profesional (Ej: Lora y Montserrat de Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #003366; /* Azul Oscuro (Seriedad) */
+    --secondary-color: #ffcc00; /* Dorado/Amarillo (Contraste Profesional) */
+    --text-color: #333333;
+    --background-light: #f9f9f9;
+    --font-heading: 'Lora', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Limita el ancho para mejor lectura */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* --- 2. Encabezado (Header) y Navegación (Nav) --- */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    border-bottom: 8px solid var(--secondary-color);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.1em;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5em 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color); /* Invierte colores al pasar el ratón */
+}
+
+/* --- 3. Contenido Principal (Main) y Secciones --- */
+
+section {
+    padding: 40px;
+    margin-top: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave y sutil */
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* Estilo para los artículos dentro de la sección "Ventajas" */
+#ventajas article {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* --- 4. Llamada a la Acción (Call to Action) --- */
+
+.call-to-action {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-size: 1.3em;
+    margin-top: 40px;
+    border: 2px solid var(--secondary-color);
+}
+
+.call-to-action p {
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.call-to-action a {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-left: 15px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.call-to-action a:hover {
+    background-color: #e6b800; /* Un tono más oscuro de dorado */
+    transform: translateY(-2px);
+}
+
+/* --- 5. Lista de Servicios --- */
+
+#servicios ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Diseño adaptable */
+    gap: 20px;
+    padding: 0;
+}
+
+#servicios ul li {
+    background-color: var(--background-light);
+    padding: 15px 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+#servicios ul li:hover {
+    background-color: #e6e6e6;
+}
+
+/* --- 6. Formulario de Contacto (Form) --- */
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #004488; /* Un tono más oscuro de azul */
+}
+
+/* --- 7. Pie de Página (Footer) --- */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* --- 8. Adaptabilidad (Media Queries) para Móviles --- */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 0.5em;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .container {
+        width: 95%;
+    }
+
+    section {
+        padding: 20px;
+    }
+    
+    .call-to-action {
+        font-size: 1.1em;
+    }
+    
+    .call-to-action a {
+        display: block;
+        margin: 15px auto 0;
+        width: 90%;
+    }
+    
+    #servicios ul {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
